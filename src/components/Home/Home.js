@@ -2,9 +2,13 @@
 
 //Module import
 import React, { Component } from 'react';
+import { Carousel, Button, Icon } from 'react-materialize';
+import 'materialize-css/dist/js/materialize.min.js';
+//import { M } from 'materialize-css';
 
 //Style import
 import './Home.css';
+import 'materialize-css/dist/css/materialize.min.css';
 
 class Home extends Component {
 	constructor(props) {
@@ -13,10 +17,49 @@ class Home extends Component {
 		this.state = {};
 	}
 
+	// componentDidMount() {
+	// 	this._auto();
+	// }
+
+	// _auto = () => {
+	// 	setInterval(() => {
+	// 		const element = M.Carousel.getInstance(
+	// 			document.querySelector('.images')
+	// 		);
+	// 		element.next();
+	// 	}, 2000);
+	// };
+
 	render() {
 		return (
 			<div className="homeContainer">
-				<h1 className="main-heading">LA PIERZZA</h1>
+				<div className="carousel-container">
+					<Carousel
+						images={[
+							'/img/pizza1.jpg',
+							'/img/pizza2.jpg',
+							'/img/pizza3.jpg',
+							'/img/pizza4.jpg',
+							'/img/pizza5.jpg'
+						]}
+						options={{
+							fullWidth: true,
+							indicators: false
+						}}
+						className="images"
+					/>
+				</div>
+				<Button
+					large
+					node="a"
+					style={{
+						marginRight: '5px'
+					}}
+					waves="light"
+				>
+					Button
+					<Icon left>cloud</Icon>
+				</Button>
 			</div>
 		);
 	}

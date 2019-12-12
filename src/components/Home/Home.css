@@ -1,14 +1,7 @@
-.homeContainer {
-	background: url('/img/pizza1.jpg');
-	height: 100vh;
-}
-
 .main-heading {
 	text-align: center;
-	padding: 4rem 0;
 	font-size: 6rem;
 	letter-spacing: 1.8rem;
-	background-color: rgba(255, 255, 255, 0.15);
-	backdrop-filter: blur(10px);
 	color: #000;
+	margin: 0;
 }

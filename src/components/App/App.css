@@ -1,15 +1,19 @@
-.nav-container {
+/* .nav-container {
 	display: flex;
 	flex-direction: row-reverse;
-	justify-content: stretch;
-}
+} */
 
 .nav-wrapper {
-	background-color: #000;
 	font-size: 2rem;
+	background-color: #900;
 }
 
 .nav-wrapper a {
 	text-decoration: none;
-	color: #fff;
+	color: #f7f7f7;
+	padding: 0 2rem;
+}
+
+.brand-logo {
+	letter-spacing: 14px;
 }
