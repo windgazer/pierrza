@@ -5,3 +5,12 @@
 	color: #000;
 	margin: 0;
 }
+
+.carousel {
+	height: 87vh;
+	overflow: hidden;
+}
+
+.showcase-btn {
+	/* transform: translateY(-130px); */
+}

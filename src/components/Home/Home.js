@@ -3,6 +3,7 @@
 //Module import
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
 
 //Style import
 import './Home.css';
@@ -17,7 +18,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="homeContainer">
-				<Carousel>
+				<Carousel className="carousel">
 					<Carousel.Item>
 						<img
 							className="d-block w-100"
@@ -58,6 +59,14 @@ class Home extends Component {
 						/>
 					</Carousel.Item>
 				</Carousel>
+				<Button
+					className="showcase-btn"
+					variant="secondary"
+					size="lg"
+					block
+				>
+					En savoir plus...
+				</Button>
 			</div>
 		);
 	}

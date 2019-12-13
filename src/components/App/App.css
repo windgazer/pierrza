@@ -1,11 +1,5 @@
-/* .nav-container {
-	display: flex;
-	flex-direction: row-reverse;
-} */
-
 .nav-wrapper {
 	font-size: 2rem;
-	background-color: #900;
 }
 
 .nav-wrapper a {
@@ -15,5 +9,6 @@
 }
 
 .brand-logo {
-	letter-spacing: 14px;
+	letter-spacing: 1.4rem;
+	font-size: 2.2rem;
 }

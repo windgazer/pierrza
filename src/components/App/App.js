@@ -4,6 +4,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
 import Home from '../Home/Home';
 import About from '../About/About';
@@ -23,25 +25,22 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div className="navbar-fixed">
-					<nav className="nav-wrapper">
-						<p className="brand-logo">PIERRZA</p>
-						<ul
-							id="nav-mobile"
-							className="right hide-on-med-and-down"
-						>
-							<li>
+				<Navbar bg="dark" variant="dark" sticky="top">
+					<Navbar.Brand className="brand-logo" href="#home">
+						LA PIERRZA
+					</Navbar.Brand>
+					<Nav className="mr-auto">
+						<div className="nav-container">
+							<div className="nav-wrapper">
 								<Link to="/">Home</Link>
-							</li>
-							<li>
+
 								<Link to="About">About</Link>
-							</li>
-							<li>
+
 								<Link to="Cart">Cart</Link>
-							</li>
-						</ul>
-					</nav>
-				</div>
+							</div>
+						</div>
+					</Nav>
+				</Navbar>
 
 				<Switch>
 					<Route path="/About">
