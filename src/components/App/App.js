@@ -3,6 +3,7 @@
 //Module import
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from '../Home/Home';
 import About from '../About/About';
