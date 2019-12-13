@@ -3,8 +3,7 @@
 //Module import
 import React, { Component } from 'react';
 import { Carousel, Button, Icon } from 'react-materialize';
-import 'materialize-css/dist/js/materialize.min.js';
-//import { M } from 'materialize-css';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 //Style import
 import './Home.css';
@@ -17,18 +16,18 @@ class Home extends Component {
 		this.state = {};
 	}
 
-	// componentDidMount() {
-	// 	this._auto();
-	// }
+	componentDidMount() {
+		this._auto();
+	}
 
-	// _auto = () => {
-	// 	setInterval(() => {
-	// 		const element = M.Carousel.getInstance(
-	// 			document.querySelector('.images')
-	// 		);
-	// 		element.next();
-	// 	}, 2000);
-	// };
+	_auto = () => {
+		setInterval(() => {
+			const element = M.Carousel.getInstance(
+				document.querySelector('.images')
+			);
+			element.next();
+		}, 2000);
+	};
 
 	render() {
 		return (
