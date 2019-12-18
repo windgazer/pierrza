@@ -25,7 +25,7 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<Navbar bg="dark" variant="dark" sticky="top">
+				<Navbar expand="lg" bg="dark" variant="dark" sticky="top">
 					<Navbar.Brand className="brand-logo" href="#home">
 						LA PIERRZA
 					</Navbar.Brand>
@@ -49,7 +49,6 @@ class App extends Component {
 					<Route path="/Cart">
 						<Cart></Cart>
 					</Route>
-
 					<Route path="/">
 						<Home></Home>
 					</Route>

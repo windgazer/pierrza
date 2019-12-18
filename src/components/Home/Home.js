@@ -3,7 +3,8 @@
 //Module import
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/Button';
+
+import Menu from '../Menu/Menu';
 
 //Style import
 import './Home.css';
@@ -12,61 +13,76 @@ class Home extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {};
+		this.state = {
+			showMenu: false
+		};
 	}
+
+	_showMenu = e => {
+		let offset = e.target.offsetTop;
+		this.setState({ showMenu: true }, () => {
+			window.scroll(0, offset);
+		});
+	};
 
 	render() {
 		return (
-			<div className="homeContainer">
-				<Carousel className="carousel">
-					<Carousel.Item>
-						<img
-							className="d-block w-100"
-							src="/img/pizza1.jpg"
-							alt="First slide"
-						/>
-					</Carousel.Item>
+			<div>
+				<div id="showcase" className="homeContainer">
+					<Carousel className="carousel">
+						<Carousel.Item>
+							<img
+								className="d-block w-100"
+								src="/img/pizza1.jpg"
+								alt="First slide"
+							/>
+						</Carousel.Item>
 
-					<Carousel.Item>
-						<img
-							className="d-block w-100"
-							src="/img/pizza2.jpg"
-							alt="Third slide"
-						/>
-					</Carousel.Item>
+						<Carousel.Item>
+							<img
+								className="d-block w-100"
+								src="/img/pizza2.jpg"
+								alt="Third slide"
+							/>
+						</Carousel.Item>
 
-					<Carousel.Item>
-						<img
-							className="d-block w-100"
-							src="/img/pizza3.jpg"
-							alt="Third slide"
-						/>
-					</Carousel.Item>
+						<Carousel.Item>
+							<img
+								className="d-block w-100"
+								src="/img/pizza3.jpg"
+								alt="Third slide"
+							/>
+						</Carousel.Item>
 
-					<Carousel.Item>
-						<img
-							className="d-block w-100"
-							src="/img/pizza4.jpg"
-							alt="Fourth slide"
-						/>
-					</Carousel.Item>
+						<Carousel.Item>
+							<img
+								className="d-block w-100"
+								src="/img/pizza4.jpg"
+								alt="Fourth slide"
+							/>
+						</Carousel.Item>
 
-					<Carousel.Item>
-						<img
-							className="d-block w-100"
-							src="/img/pizza5.jpg"
-							alt="Fith slide"
-						/>
-					</Carousel.Item>
-				</Carousel>
-				<Button
-					className="showcase-btn"
-					variant="secondary"
-					size="lg"
-					block
-				>
-					En savoir plus...
-				</Button>
+						<Carousel.Item>
+							<img
+								className="d-block w-100"
+								src="/img/pizza5.jpg"
+								alt="Fifth slide"
+							/>
+						</Carousel.Item>
+					</Carousel>
+					<div className="btn-container">
+						<button
+							className="showcase-btn"
+							onClick={this._showMenu}
+						>
+							Click ici pour découvrir nos spécialités !
+						</button>
+					</div>
+				</div>
+
+				<div className={this.state.showMenu ? '' : 'd-none'}>
+					<Menu />
+				</div>
 			</div>
 		);
 	}

@@ -1,0 +1,64 @@
+{
+	"menu": [
+		{
+			"pizza": "l'Alcatraz",
+			"description": "Avec un grand trou au milieu",
+			"price": "8$"
+		},
+		{
+			"pizza": "La WWF",
+			"description": "Avec la viande de 8 espèces menacées",
+			"price": "12$"
+		},
+		{
+			"pizza": "La Calbo",
+			"description": "Poissons de l'aquarium de l'acceuil en croute d'ongles de pied de Michael",
+			"price": "12$"
+		},
+		{
+			"pizza": "La Vegan",
+			"description": "Avec de l'herbe arrosée de Glyphosate",
+			"price": "6$"
+		},
+		{
+			"pizza": "La Fallout",
+			"description": "Avec de la viande origine Tchernobyl cuite au polonium",
+			"price": "17$"
+		},
+		{
+			"pizza": "La Kazad Dum",
+			"description": "Avec de la viande de Balrog",
+			"price": "17$"
+		},
+		{
+			"pizza": "L'Empire strikes back",
+			"description": "Avec de la viande d'Ewok cuite au sabre laser",
+			"price": "18$"
+		},
+		{
+			"pizza": "La Fantome",
+			"description": "...",
+			"price": "15$"
+		},
+		{
+			"pizza": "L'Anne Hathaway",
+			"description": "Pepperoni, Jalapenos, Olives",
+			"price": "45$"
+		},
+		{
+			"pizza": "L'A poil",
+			"description": "Avec un mélange de poils de diverses origine",
+			"price": "11$"
+		},
+		{
+			"pizza": "La sex on the beach",
+			"description": "Avec du sable et des capotes rammassées sur la plage du cap d'Agde",
+			"price": "13$"
+		},
+		{
+			"pizza": "La marche pas dessus",
+			"description": "Au Lego",
+			"price": "36$"
+		}
+	]
+}
