@@ -19,13 +19,31 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {};
+		this.state = {
+			navStyle: ''
+		};
 	}
 
+	componentDidMount() {
+		window.addEventListener('scroll', () => {
+			let scroll = window.scrollY;
+			if (scroll >= 1125) {
+				this.setState({ navStyle: 'navBarFaded' });
+			} else {
+				this.setState({ navStyle: 'navBarOpaque' });
+			}
+		});
+	}
 	render() {
 		return (
 			<Router>
-				<Navbar expand="lg" bg="dark" variant="dark" sticky="top">
+				<Navbar
+					expand="lg"
+					bg="dark"
+					variant="dark"
+					sticky="top"
+					className={this.state.navStyle}
+				>
 					<Navbar.Brand className="brand-logo" href="#home">
 						LA PIERRZA
 					</Navbar.Brand>
