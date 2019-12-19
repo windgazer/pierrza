@@ -20,17 +20,21 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			navStyle: ''
+			navStyle: '',
+			btnDisplay: ''
 		};
 	}
 
 	componentDidMount() {
 		window.addEventListener('scroll', () => {
 			let scroll = window.scrollY;
-			if (scroll >= 1125) {
-				this.setState({ navStyle: 'navBarFaded' });
+			if (scroll >= 800) {
+				this.setState({
+					navStyle: 'navBarFaded',
+					btnDisplay: 'btnOff'
+				});
 			} else {
-				this.setState({ navStyle: 'navBarOpaque' });
+				this.setState({ navStyle: 'navBarOpaque', btnDisplay: '' });
 			}
 		});
 	}
@@ -68,7 +72,7 @@ class App extends Component {
 						<Cart></Cart>
 					</Route>
 					<Route path="/">
-						<Home></Home>
+						<Home btnStyle={this.state.btnDisplay}></Home>
 					</Route>
 				</Switch>
 			</Router>

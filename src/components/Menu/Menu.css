@@ -1,38 +1,42 @@
 #menu {
 	height: 100vh;
 	background-image: url('/img/four.jpg');
+	position: relative;
 }
 
-ul {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.main-heading {
-	padding: 4rem 0;
+#menu .main-heading {
+	padding: 100px 0 4rem 0;
+	font-size: 4rem;
 	font-weight: 300;
-	color: #f7f7f7 !important;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 1.5rem;
 }
 
-.col {
-	text-align: left;
+#menu .overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: black;
+	opacity: 0.5;
+	z-index: 1;
 }
 
-.col li {
-	padding: 1rem 0;
+#menu .content {
+	z-index: 2;
+	position: relative;
 }
 
-.pizzaName {
-	padding: 0 0rem;
+.card {
+	margin-top: 3rem;
+	padding: 1rem 1rem 0rem 1rem;
+	background-color: #343a40;
 }
 
-.pizzaPrice {
-	padding: 0 0rem;
-}
-
-.menu-img {
-	width: 100%;
-	margin-top: 3.4rem;
+table {
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 300;
 }

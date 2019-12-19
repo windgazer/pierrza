@@ -7,7 +7,7 @@ html {
 }
 
 .navBarFaded {
-	opacity: 0.5;
+	opacity: 0.8;
 	transition: opacity 1s;
 }
 

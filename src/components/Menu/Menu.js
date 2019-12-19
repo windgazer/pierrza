@@ -4,17 +4,18 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { menu } from '../../data/menu.json';
+import Table from 'react-bootstrap/Table';
 
 import './Menu.css';
 
 export default class Menu extends Component {
 	menu = () => {
 		const pizzas = menu.map((element, index) => (
-			<li key={index} className="pizza">
-				<span className="pizzaName"> {element.pizza} </span>
-				{element.description}
-				<span className="pizzaPrice"> {element.price} </span>
-			</li>
+			<tr key={index}>
+				<td>{element.pizza}</td>
+				<td>{element.description}</td>
+				<td>{element.price}</td>
+			</tr>
 		));
 		return pizzas;
 	};
@@ -22,16 +23,34 @@ export default class Menu extends Component {
 	render() {
 		return (
 			<div id="menu">
-				<h1 className="main-heading">Notre Selection de Pizzas</h1>
-				<Container>
-					<Row>
-						<Col>
-							<Card>
-								<ul>{this.menu()}</ul>
-							</Card>
-						</Col>
-					</Row>
-				</Container>
+				<div className="content">
+					<h1 className="main-heading">Notre Selection de Pizzas</h1>
+					<Container>
+						<Row noGutters="true">
+							<Col>
+								<Card>
+									<Table
+										striped
+										bordered
+										hover
+										variant="dark"
+									>
+										<thead>
+											<tr>
+												<th>La Pierrza</th>
+												<th>Les Ingrédients</th>
+												<th>Les Moneys</th>
+											</tr>
+										</thead>
+										<tbody>{this.menu()}</tbody>
+									</Table>
+								</Card>
+							</Col>
+						</Row>
+					</Container>
+				</div>
+
+				<div className="overlay"></div>
 			</div>
 		);
 	}

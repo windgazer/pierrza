@@ -10,14 +10,6 @@ button {
 	overflow: hidden;
 }
 
-.main-heading {
-	text-align: center;
-	font-size: 6rem;
-	letter-spacing: 1.8rem;
-	color: #000;
-	margin: 0;
-}
-
 .carousel {
 	height: 86vh;
 	overflow: hidden;
@@ -42,4 +34,8 @@ button {
 	text-decoration: none;
 	transform: scale(1.1);
 	transition: all 0.5s ease-in-out;
+}
+
+.btnOff {
+	display: none;
 }

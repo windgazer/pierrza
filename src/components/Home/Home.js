@@ -72,8 +72,8 @@ class Home extends Component {
 					</Carousel>
 					<div className="btn-container">
 						<button
-							className="showcase-btn"
 							onClick={this._showMenu}
+							className={'showcase-btn ' + this.props.btnStyle}
 						>
 							Click ici pour découvrir nos spécialités !
 						</button>
