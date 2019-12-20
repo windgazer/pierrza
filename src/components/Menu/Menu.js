@@ -26,7 +26,7 @@ export default class Menu extends Component {
 				<div className="content">
 					<h1 className="main-heading">Notre Selection de Pizzas</h1>
 					<Container>
-						<Row noGutters="true">
+						<Row>
 							<Col>
 								<Card>
 									<Table
