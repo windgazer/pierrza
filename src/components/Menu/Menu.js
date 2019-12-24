@@ -5,53 +5,50 @@ import { Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { menu } from '../../data/menu.json';
 import Table from 'react-bootstrap/Table';
+import Detail from '../Detail/Detail';
 
 import './Menu.css';
 
 export default class Menu extends Component {
-	menu = () => {
-		const pizzas = menu.map((element, index) => (
-			<tr key={index}>
-				<td>{element.pizza}</td>
-				<td>{element.description}</td>
-				<td>{element.price}</td>
-			</tr>
-		));
-		return pizzas;
-	};
+  menu = () => {
+    const pizzas = menu.map((element, index) => (
+      <tr key={index}>
+        <td>{element.pizza}</td>
+        <td>{element.description}</td>
+        <td>{element.price}</td>
+      </tr>
+    ));
+    return pizzas;
+  };
 
-	render() {
-		return (
-			<div id="menu">
-				<div className="content">
-					<h1 className="main-heading">Notre Selection de Pizzas</h1>
-					<Container>
-						<Row>
-							<Col>
-								<Card>
-									<Table
-										striped
-										bordered
-										hover
-										variant="dark"
-									>
-										<thead>
-											<tr>
-												<th>La Pierrza</th>
-												<th>Les Ingrédients</th>
-												<th>Les Moneys</th>
-											</tr>
-										</thead>
-										<tbody>{this.menu()}</tbody>
-									</Table>
-								</Card>
-							</Col>
-						</Row>
-					</Container>
-				</div>
+  render() {
+    return (
+      <div id='menu'>
+        <div className='content'>
+          <h1 className='main-heading'>Notre Selection de Pizzas</h1>
+          <Container>
+            <Row>
+              <Col>
+                <Card>
+                  <Table striped bordered hover variant='dark'>
+                    <thead>
+                      <tr>
+                        <th>La Pierrza</th>
+                        <th>Les Ingrédients</th>
+                        <th>Les Moneys</th>
+                      </tr>
+                    </thead>
+                    <tbody>{this.menu()}</tbody>
+                  </Table>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+          <Detail />
+        </div>
 
-				<div className="overlay"></div>
-			</div>
-		);
-	}
+        <div className='overlay'></div>
+      </div>
+    );
+  }
 }
