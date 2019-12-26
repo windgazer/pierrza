@@ -10,10 +10,24 @@ import Detail from '../Detail/Detail';
 import './Menu.css';
 
 export default class Menu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pizza: null,
+    };
+  }
+
+  setPizza = (pizza) => {
+    console.log(pizza);
+    this.setState({
+      pizza,
+    })
+  }
+
   menu = () => {
     const pizzas = menu.map((element, index) => (
       <tr key={index}>
-        <td>{element.pizza}</td>
+        <td onClick={() => this.setPizza(element)}>{element.pizza}</td>
         <td>{element.description}</td>
         <td>{element.price}</td>
       </tr>
@@ -22,6 +36,7 @@ export default class Menu extends Component {
   };
 
   render() {
+    console.log(this.state.pizza);
     return (
       <div id='menu'>
         <div className='content'>
@@ -44,7 +59,7 @@ export default class Menu extends Component {
               </Col>
             </Row>
           </Container>
-          <Detail />
+          <Detail pizza={this.state.pizza}/>
         </div>
 
         <div className='overlay'></div>
