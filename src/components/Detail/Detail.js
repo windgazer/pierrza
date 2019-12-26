@@ -11,11 +11,13 @@ class Detail extends Component {
     this.setState({ show: !this.state.show });
   };
   render() {
+    const pizza = this.props.pizza || {};
+    console.log(pizza);
     return (
       <div>
-        <Modal show={this.state.show} centered={true} size='lg'>
+        {this.props.pizza?(<Modal show={this.state.show} centered={true} size='lg'>
           <Modal.Header>
-            <Modal.Title>Titre</Modal.Title>
+            <Modal.Title>{pizza.pizza}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <p>Body</p>
@@ -26,7 +28,7 @@ class Detail extends Component {
               Fermer
             </Button>
           </Modal.Footer>
-        </Modal>
+        </Modal>):(<br />)}
         <Button onClick={this.showDetail}>TEST</Button>
       </div>
     );
